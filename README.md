@@ -136,7 +136,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Arunov Chakraborty**
 - GitHub: [@SunnyUI-cyberhead](https://github.com/SunnyUI-cyberhead)
-- LinkedIn: [Connect on LinkedIn](https://linkedin.com/in/arunov-chakraborty)
+- LinkedIn: [Connect on LinkedIn](www.linkedin.com/in/arunov-chakraborty)
 
 ## 🙏 Acknowledgments
 
