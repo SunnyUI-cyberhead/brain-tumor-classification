@@ -1,12 +1,13 @@
-## Brain Tumor MRI Classification System
+# Brain Tumor MRI Classification System
 
 A deep learning-based web application for classifying brain MRI images into four categories: Glioma, Meningioma, Pituitary Tumor, and No Tumor.
 
 ![Brain Tumor Classification Dashboard](https://img.shields.io/badge/Python-3.7+-blue.svg)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.10+-orange.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.25+-red.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-## Features
+## 🧠 Features
 
 - **Multiple Deep Learning Models**: ResNet50, InceptionV3, MobileNetV2, and Custom CNN
 - **Real-time MRI Analysis**: Upload and analyze brain MRI images instantly
@@ -14,7 +15,7 @@ A deep learning-based web application for classifying brain MRI images into four
 - **Comprehensive Results**: Detailed predictions with confidence scores
 - **Model Comparison**: Performance metrics and insights for all models
 
-## Model Performance
+## 📊 Model Performance
 
 | Model | Accuracy | Precision | Recall | F1-Score |
 |-------|----------|-----------|---------|----------|
@@ -23,39 +24,59 @@ A deep learning-based web application for classifying brain MRI images into four
 | MobileNetV2 | 93.25% | 93.08% | 93.14% | 93.11% |
 | Custom CNN | 88.56% | 88.34% | 88.45% | 88.39% |
 
-## Quick Start
+## 🚀 Quick Start
 
 ### Prerequisites
 - Python 3.7+
+- Git LFS (for downloading model files)
 - CUDA-capable GPU (optional but recommended)
 
 ### Installation
 
-1. Clone the repository
+1. **Clone the repository with Git LFS**
 ```bash
-git clone https://github.com/yourusername/brain-tumor-classification.git
+# Make sure Git LFS is installed
+git lfs install
+
+# Clone the repository
+git clone https://github.com/SunnyUI-cyberhead/brain-tumor-classification.git
 cd brain-tumor-classification
 ```
 
-2. Install dependencies
+2. **Create a virtual environment** (recommended)
+```bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+# Linux/Mac
+python -m venv venv
+source venv/bin/activate
+```
+
+3. **Install dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Run the application
+4. **Run the application**
 ```bash
 streamlit run dashboard.py
 ```
 
-4. Open your browser and navigate to `http://localhost:8501`
+5. **Open your browser** and navigate to `http://localhost:8501`
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 brain-tumor-classification/
-├── models/                    # Trained model files
+├── models/                    # Trained model files (Git LFS)
+│   ├── ResNet50_best.h5
+│   ├── InceptionV3_best.h5
+│   ├── MobileNetV2_best.h5
+│   └── Custom_CNN_best.h5
 ├── dashboard.py              # Streamlit web application
-├── train.py                  # Model training script
+├── BrainTumour.py                  # Model training script
 ├── requirements.txt          # Python dependencies
 ├── model_info.json          # Model metadata
 ├── model_comparison_results.csv  # Performance metrics
@@ -63,22 +84,22 @@ brain-tumor-classification/
 └── training_history_*.png    # Training performance plots
 ```
 
-## Usage
+## 💻 Usage
 
 ### Web Application
 1. Launch the dashboard using `streamlit run dashboard.py`
 2. Select a model from the sidebar
-3. Upload an MRI image (JPG/PNG)
+3. Upload an MRI image (JPG/PNG format)
 4. Click "Analyze MRI Scan"
 5. View the prediction results and confidence scores
 
 ### Training Models
-To train your own models:
+To train your own models on a custom dataset:
 ```bash
-python train.py
+python train.py --data_path /path/to/your/dataset
 ```
 
-## Screenshots
+## 🖼️ Application Interface
 
 ### Main Dashboard
 The application features a modern, medical-grade interface with real-time analysis capabilities.
@@ -86,46 +107,48 @@ The application features a modern, medical-grade interface with real-time analys
 ### Model Comparison
 Interactive charts showing comparative performance metrics across all models.
 
-## Medical Disclaimer
+## ⚠️ Medical Disclaimer
 
 **Important**: This AI system is designed to assist medical professionals and should not be used as the sole basis for diagnosis. Always consult with qualified healthcare providers for proper medical evaluation and treatment decisions.
 
-## Technologies Used
+## 🛠️ Technologies Used
 
-- **Deep Learning**: TensorFlow/Keras
-- **Models**: Transfer Learning with ResNet50, InceptionV3, MobileNetV2
-- **Frontend**: Streamlit
+- **Deep Learning**: TensorFlow/Keras 2.10+
+- **Models**: Transfer Learning with pretrained ImageNet weights
+- **Frontend**: Streamlit 1.25+
 - **Visualization**: Plotly, Matplotlib, Seaborn
-- **Data Processing**: NumPy, Pandas, PIL
+- **Data Processing**: NumPy, Pandas, PIL/Pillow
+- **Model Storage**: Git LFS for large model files
 
-## Dataset
+## 📊 Dataset
 
 The models were trained on a brain tumor MRI dataset containing four classes:
-- Glioma
-- Meningioma
-- Pituitary Tumor
-- No Tumor
+- **Glioma**: Tumors arising from glial cells
+- **Meningioma**: Tumors from the meninges
+- **Pituitary Tumor**: Tumors in the pituitary gland
+- **No Tumor**: Healthy brain MRI scans
 
-## Contributing
+## 📄 License
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## License
+## 👨‍💻 Author
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+**Arunov Chakraborty**
+- GitHub: [@SunnyUI-cyberhead](https://github.com/SunnyUI-cyberhead)
+- LinkedIn: [Connect on LinkedIn](https://linkedin.com/in/arunov-chakraborty)
 
-## Author
+## 🙏 Acknowledgments
 
-[Arunov Chakraborty]
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourusername)
+- Thanks to Labmentix for providing brain tumor MRI dataset 
+- The medical imaging community for valuable insights
 
-## Acknowledgments
+## 📞 Support
 
-- Thanks to the dataset providers
-- TensorFlow/Keras team for the excellent deep learning framework
-- Streamlit team for the amazing web app framework
+If you encounter any issues or have questions, please:
+- Open an issue on [GitHub Issues](https://github.com/SunnyUI-cyberhead/brain-tumor-classification/issues)
+- Check existing issues before creating a new one
 
 ---
 
-**Note**: This project is for educational and research purposes. For medical diagnosis, always consult qualified healthcare professionals.
+**⚕️ Note**: This project is for educational and research purposes. For medical diagnosis, always consult qualified healthcare professionals.
